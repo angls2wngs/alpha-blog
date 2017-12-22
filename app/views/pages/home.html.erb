@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>AlphaBlog Homepage</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body style= 'margin-right: 12em; margin-left: 12em'>
+  <center>
+    <h1 text-align='center'>Welcome to our Alpha Blog!</h1>
+    <img src='http://i.imgur.com/AJNcbaJ.jpg' alt='Ballet Dancer' align='center' width="70%" height="70%">
+    <p>This is an assignment for Udemy's Ruby on Rails Developer Course and one 
+    of the first steps in our transition from dancer to developer.</p>
+    <p>Visit our <%= link_to 'about', about_path %> page.</p>
+    <footer>We'd love to hear from you.<br>
+    Email us at <a href='mailto:alphablog@example.com?subject=Website Inquiry'>AlphaBlog@example.com</a></footer>
+</center>
+</body>
+</html>
