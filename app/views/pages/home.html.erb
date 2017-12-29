@@ -5,10 +5,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style= 'margin-right: 12em; margin-left: 12em'>
+<body>
   <center>
-    <h1 text-align='center'>Welcome to our Alpha Blog!</h1>
-    <img src='http://i.imgur.com/AJNcbaJ.jpg' alt='Ballet Dancer' align='center' width="70%" height="70%">
+    <div class="center jumbotron">
+      <h1>The Alpha Blog</h1>
+      <!--<img src='http://i.imgur.com/AJNcbaJ.jpg' alt='Ballet Dancer' align='center' width="70%" height="70%"> -->
+      <p>
+        <br>
+        <%= link_to "Sign up now!", "#", class: "btn btn-primary btn-lg" %> 
+      </p>
+    </div>
     <p>
       This is an assignment for Udemy's Ruby on Rails Developer Course and one 
     of the first steps in our transition from dancer to developer.

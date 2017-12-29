@@ -1,4 +1,4 @@
-$navbar-default-bg: #48D1CC;
+$navbar-default-bg: #20B2AA;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -9,4 +9,46 @@ $navbar-default-bg: #48D1CC;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoraton: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn-lg {
+  background-color: #20B2AA;
+  border: none;
+}
+
+.btn-lg:hover {
+  background-color: #008B8B;
+}
+
+.jumbotron {
+  background-image: asset-url('barre.jpg');
+  background-size: cover;
+  height: 600px;
+}
+
+.jumbotron h1, .jumbotron h2{
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 45px;
+  padding-top: 5px;
+}
+
+.footer ul {
+  list-style: none;
+  float: right;
 }
