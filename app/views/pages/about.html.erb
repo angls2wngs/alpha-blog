@@ -1,23 +1,24 @@
 <body>
-  
-<center><h1>Hmm, we must have enticed you!</h1>
-<img src = 'https://i.imgur.com/G2r84oj.jpg'  alt='Dancer Leapig' align='center' width="70%" height="70%">
-<p>Thanks for checking out our about page. Here we tell you a little more about
-who we are and what we can do for you. It's that simple. Basically, we are just 
-dancing our way through a homework assignment for Udemy's Ruby on Rails Developer Course. 
-We're learning rails and all of the sweet tools available for making web application development 
-as easy as two-step. Okay, well maybe not that easy.</p>
-<p>
-  Visit our <%= link_to 'homepage', root_path %>
-</p>
-<p>
-  <%= link_to 'View Articles', articles_path %>
-</p>
-
-<footer>Still intrigued?
-Contact us at <a href='mailto:alphablog@example.com?subject=Website Inquiry'>
-  AlphaBlog@example.com
-</a> 
-</footer>
-</center>
+  <center>
+    <h1>Hmm, we must have enticed you!</h1>
+    <div>
+      <img src = 'https://i.imgur.com/G2r84oj.jpg'  alt='Dancer Leaping' align='center' width="70%" height="70%">
+    </div>
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="about-body">
+        <p>
+          Thanks for checking out our about page. Here we tell you a little more about
+          who we are and what we can do for you. It's that simple. Basically, we are just 
+          dancing our way through a homework assignment for Udemy's Ruby on Rails Developer Course. 
+          We're learning rails and all of the sweet tools available for making web application development 
+          as easy as two-step. Okay, well maybe not that easy.
+        </p>
+        <p class="about-contact-us">
+          Still intrigued? <br>
+          Contact us at <a href='mailto:alphablog@example.com?subject=Website Inquiry'>AlphaBlog@example.com</a><br>
+          <%= link_to 'View Articles', articles_path %>
+        </p>
+      </div>
+    </div>
+  </center>
 </body>
