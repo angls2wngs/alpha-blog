@@ -21,12 +21,12 @@ $navbar-default-bg: #20B2AA;
   text-align: center;
 }
 
-.btn {
+.btn-lg {
   background-color: #20B2AA;
   border: none;
 }
 
-.btn:hover {
+.btn-lg:hover {
   background-color: #008B8B;
 }
 
@@ -46,6 +46,15 @@ $navbar-default-bg: #20B2AA;
 .footer {
   margin-top: 45px;
   padding-top: 5px;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
 }
 
 .footer ul {
