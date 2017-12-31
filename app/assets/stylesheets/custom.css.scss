@@ -30,6 +30,15 @@ $navbar-default-bg: #20B2AA;
   background-color: #008B8B;
 }
 
+.btn-lrg {
+  background-color: #20B2AA;
+  border: none;
+}
+
+.btn-lrg:hover {
+  background-color: #008B8B;
+}
+
 .jumbotron {
   background-image: asset-url('barre.jpg');
   background-size: cover;
