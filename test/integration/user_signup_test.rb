@@ -2,11 +2,15 @@ require 'test_helper'
 
 class UserSignupTest < ActionDispatch::IntegrationTest
   
+  def setup
+    @user = User.create(username: "john", email: "john@example.com", password: "password")
+  end
+  
   test "new user signup" do
     get signup_path  
     assert_template 'users/new'
     assert_difference 'User.count', 1 do
-      post_via_redirect users_path, user: {name: "testing", email: "testing@example.com", password: "password" }
+      post_via_redirect users_path, user: {name: "testing", email: "testing@example.com", password: "password"}
     end
     assert_template 'users/show'
     assert_match "testing", response.body
