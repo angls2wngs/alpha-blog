@@ -4,7 +4,12 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
  
   def index
+    #@articles = Article.paginate(page: params[:page], per_page: 5)
+    if params[:search]
+    @articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
+    else
     @articles = Article.paginate(page: params[:page], per_page: 5)
+    end
   end
  
   def new
@@ -16,8 +21,7 @@ class ArticlesController < ApplicationController
   end
   
   def search
-    @article = Article.new_from_lookup(params[:article])
-    render 'edit_user_path(current_user)'
+   @articles = Article.all
   end
   
   def create
