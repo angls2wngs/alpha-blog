@@ -2,6 +2,9 @@
 <div align="center">
   <%= will_paginate %>
 </div>
+ <% if @articles.blank? %>
+  <h4 align="center">There are no articles containing the term "<%= params[:search] %>."</h4>
+  <% end %>
 <%= render 'article', obj: @articles %>
 <div align="center">
   <%= will_paginate %>
