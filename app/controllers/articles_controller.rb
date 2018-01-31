@@ -15,6 +15,11 @@ class ArticlesController < ApplicationController
 
   end
   
+  def search
+    @article = Article.new_from_lookup(params[:article])
+    render 'edit_user_path(current_user)'
+  end
+  
   def create
     @article = Article.new(article_params)
     @article.user = current_user
