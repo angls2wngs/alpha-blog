@@ -10,4 +10,9 @@ class User < ActiveRecord::Base
             length: { maximum: 105 },
             format: { with: VALID_EMAIL_REGEX }
   has_secure_password
+  
+  #def self.search(search)
+   # where("username LIKE ? OR email LIKE ?", 
+   # "%#{search}%", "%#{search}%")
+ #  end
 end
