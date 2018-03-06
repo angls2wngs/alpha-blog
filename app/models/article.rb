@@ -6,8 +6,8 @@ class Article < ActiveRecord::Base
   validates :description, presence: true, length: { minimum: 10, maximum: 300}
   validates :user_id, presence: true 
   
-  def self.search(search)
-    where("title LIKE ? OR description LIKE ?" , 
-    "%#{search}%", "%#{search}%")
-  end
+  #def self.search(search)
+   # where("title LIKE ? OR description LIKE ?" , 
+   # "%#{search}%", "%#{search}%")
+  #end
 end

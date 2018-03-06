@@ -4,11 +4,11 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
  
   def index
-    if params[:search]
-    @articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
-    else
+    #if params[:search]
+    #@articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
+    #else
     @articles = Article.paginate(page: params[:page], per_page: 5)
-    end
+   #end
   end
  
   def new
