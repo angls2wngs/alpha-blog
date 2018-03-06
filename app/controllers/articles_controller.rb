@@ -11,6 +11,16 @@ class ArticlesController < ApplicationController
    #end
   end
  
+ def search
+    if params[:search].blank?
+      flash.now[:danger]="You have entered an empty search."
+    else  
+      @article = Article.search(params[:search_param])
+      flash.now[:danger]="No articles match this search criteria." if @articles.blank?
+    end
+    render 'article'
+ end
+  
   def new
    @article = Article.new
   end
