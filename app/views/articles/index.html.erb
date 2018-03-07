@@ -1,12 +1,12 @@
 <h1 align="center">All Articles</h1>
 <div align="center">
-  <%= form_tag search_articles_path, remote: true, method: :get, id:"search-form" do %>
+  <%= form_tag(articles_path, :method => "get", id: "search-form") do %>
     <div class="form-group row text-center col-md-12 center">
       <div class="col-md-5 col-md-offset-3">
-        <%= text_field_tag :search, params[:search], placeholder: "Search Articles", autofocus: true,
-                                class: "form-control search-box input-lg" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes", 
+                        class: "form-control search-box input-lg" %>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2">               
         <%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
           <i class="fa fa-search"></i> Search
         <% end %>

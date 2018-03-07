@@ -4,22 +4,22 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
  
   def index
-    #if params[:search]
-    #@articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
-    #else
+    if params[:search]
+    @articles = Article.search(params[:search]).paginate(page: params[:page], per_page: 5)
+    else
     @articles = Article.paginate(page: params[:page], per_page: 5)
-   #end
+    end
   end
  
- def search
-    if params[:search].blank?
-      flash.now[:danger]="You have entered an empty search."
-    else  
-      @article = Article.search(params[:search_param])
-      flash.now[:danger]="No articles match this search criteria." if @articles.blank?
-    end
-    render 'article'
- end
+ #def search
+  #  if params[:search].blank?
+  #    flash.now[:danger]="You have entered an empty search."
+  #  else  
+  #    @article = Article.search(params[:search])
+   #   flash.now[:danger]="No articles match this search criteria." if @articles.blank?
+  #  end
+  #  render 'article'
+# end
   
   def new
    @article = Article.new

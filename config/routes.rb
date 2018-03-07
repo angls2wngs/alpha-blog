@@ -19,7 +19,7 @@ delete 'logout', to: 'sessions#destroy'
 
 resources :categories, except: [:destroy]
 
-get 'search_articles', to: 'articles#search'
+#get 'search_articles', to: 'articles#search'
 
 
   # Example of regular route:
