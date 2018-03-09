@@ -7,7 +7,7 @@ class Article < ActiveRecord::Base
   validates :user_id, presence: true 
   
   def self.search(search)
-   where("title LIKE ? OR description LIKE ?" , 
+   where("LOWER(title) LIKE ? OR LOWER(description) LIKE ?" , 
    "%#{search}%", "%#{search}%")
   end
 end

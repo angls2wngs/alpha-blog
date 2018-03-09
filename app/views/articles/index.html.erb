@@ -16,8 +16,8 @@
   <%= will_paginate %>
 </div>
 </div>
- <% if @articles.blank? %>
-  <h4 align="center">There are no articles containing the term "<%= params[:search]%>."</h4>
+ <% if @articles.blank? 
+   flash.now[:danger]="There are no articles containing the term #{params[:search]}."%>
   <% end %>
 <%= render 'article', obj: @articles %>
 <div align="center">
