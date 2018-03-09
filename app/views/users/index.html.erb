@@ -31,5 +31,8 @@
       </div>
     </ul>
   <% end %>
+  <% if @users.blank? 
+   flash.now[:danger]="There are no bloggers with that username or email."%>
+  <% end %>
   <%= will_paginate %>
 </div>
